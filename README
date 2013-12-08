@@ -1,0 +1,5 @@
+== WHAT IS IT? ==
+It's a simple Prolog intepreter written in Haskell.
+
+== REQUIREMENTS ==
+* Parsec module

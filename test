@@ -1,0 +1,33 @@
+male(adam) :- 
+male(john) :- 
+male(joshua) :- 
+male(mark) :- 
+male(david) :- 
+
+female(eve) :-
+female(helen) :-
+female(ivonne) :-
+female(anna) :-
+
+parent(adam, helen) :-
+parent(adam, ivonne) :-
+parent(adam, anna) :-
+
+parent(eve, helen) :-
+parent(eve, ivonne) :-
+parent(eve, anna) :-
+
+parent(john, joshua) :-
+parent(helen, joshua) :-
+
+parent(ivonne, david) :-
+parent(mark, david) :-
+
+father(X, Y) :- parent(X,Y), male(X)
+grandfather(X, Y) :- parent(X,Z), parent(Z, Y), male(X)
+couple(X,Y) :- male(X), female(Y), parent(X, Z), parent(Y, Z)
+
+father(X, david)
+father(X, adam)
+grandfather(X, david)
+couple(X, Y)

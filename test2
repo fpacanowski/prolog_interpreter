@@ -1,0 +1,9 @@
+append(empty, X, X) :-
+append(cons(H, T), X, cons(H, Y)) :- append(T, X, Y)
+
+append(cons(c, cons(d, empty)), cons(a, cons(b, empty)), Z)
+
+select(H, cons(H,T), T) :-
+select(X, cons(H,T), cons(H,S)) :- select(X, T, S)
+
+select(b, cons(a, cons(b, cons(c, empty))), L)
